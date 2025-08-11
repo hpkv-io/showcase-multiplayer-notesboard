@@ -1,0 +1,43 @@
+{
+  "name": "Notes Board - Real-time Collaborative Workspace",
+  "short_name": "Notes Board",
+  "description": "Create and collaborate on digital notes in real-time with your team",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#667eea",
+  "orientation": "any",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["productivity", "collaboration", "business"],
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Notes Board in action"
+    },
+    {
+      "src": "/narrow.png", 
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile Notes Board"
+    }
+  ]
+} 
