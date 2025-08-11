@@ -1,0 +1,30 @@
+# https://developers.cloudflare.com/workers/static-assets/headers
+
+# Cache Control for Static Assets
+/_next/static/*
+  Cache-Control: public,max-age=31536000,immutable
+
+# Security Headers for All Pages
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: microphone=(), camera=(),payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-eval' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' wss: https:; font-src 'self' data:; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;
+  Cross-Origin-Embedder-Policy: require-corp; report-to="default";
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-site
+
+# API Routes Security Headers
+/api/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Cache-Control: no-store, no-cache, must-revalidate
+  Pragma: no-cache
+  Cross-Origin-Resource-Policy: same-origin
+  Access-Control-Allow-Methods: POST, OPTIONS
+  Access-Control-Allow-Headers: Content-Type, Authorization
+  Access-Control-Max-Age: 86400
